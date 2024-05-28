@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Friend Check</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+
+<main>
+	<div id="gallery">
+		<figure style="height: fit-content;">
+			<div>
+				<div>
+					<h2>Lời ngỏ</h2>
+					<p>Hi chị Cá</p>
+					<p>
+						Chơi với nhau cũng được một thời gian khá lâu rùi nhỉ, cũng đủ để 2 đứa trải quan sinh nhật của nhau .
+						<br/>
+						 Dù cũng có khoảng thời gian tưởng chừng như không thể thân lại được nữa nhưng mà ,
+						 <br/> Yeah I'm still here, I'm still here for you, I'm still here for us. 
+						 <br>Mãi thân ~~
+						 <br>
+						 <br>
+						"Như ngày hôm qua" - Sơn Tùng MTP nhasaaaa <3
+					</p>
+				</div>
+			</div>
+		</figure>
+		<figure style="height: fit-content;">
+			<img  src="./imgs/9.jpg" alt="rainbow during daytime. " title="Photo by Yulia Gadalina for Unsplash">
+		</figure>
+		<figure style="height: fit-content;">
+			<img src="./imgs/11.jpg" alt="white sea of clouds. " title="Photo by Szabo Viktor for Unsplash">
+		</figure>
+		<figure style="height: fit-content;">
+			<img src="./imgs/12.jpg" alt="white sea of clouds. " title="Photo by Szabo Viktor for Unsplash">
+		</figure>
+		<figure style="height: fit-content;">
+			<img src="./imgs/1.jpg" alt="Pink and blue clouds at sunset. " title="Photo by Jeremy Doddridge for Unsplash">
+		</figure>
+	
+		<figure style="height: fit-content;">
+			<img src="./imgs/2.jpg" alt="Low angle view up into a sky filled with deep blue clouds. " title="Photo by Matthew Brayer for Unsplash">
+		</figure>
+		<figure style="height: fit-content;">
+			<img  src="./imgs/3.jpg" alt="Heavy gray clouds in the sky. " title="Photo by Simeon Muller for Unsplash">
+		</figure>
+		<figure style="height: fit-content;">
+			<img  src="./imgs/4.jpg" alt="Deep orange clouds at sunset. " title="Photo by Laura Vinck for Unsplash">
+		</figure>
+		<figure style="height: fit-content;">
+			<img  src="./imgs/5.jpg" alt="Clouds in shades of dark blue and magenta at sunset. " title="Photo by Szabo Viktor for Unsplash">
+		</figure>
+		<figure style="height: fit-content;">
+			<img  src="./imgs/6.jpg" alt="Clouds in shades of blue and gold at sunrise. " title="Photo by Łukasz Łada for Unsplash">
+		</figure>
+		<figure style="height: fit-content;">
+			<img  src="./imgs/7.jpg" alt='clouds and sky during daytime' title="Photo by Diego PH for Unsplash">
+		</figure>
+		<figure style="height: fit-content;">
+			<img  src="./imgs/8.jpg" title="Photo by Alex Machado for Unsplash">
+		</figure>
+		<figure style="height: fit-content;">
+			<img  src="./imgs/13.jpg" title="Photo by Alex Machado for Unsplash">
+		</figure>
+		<figure style="height: fit-content;">
+			<img  src="./imgs/14.jpg" title="Photo by Alex Machado for Unsplash">
+		</figure>
+	</div>
+</main>
+
+
+<!-- partial -->
+  <script  src="./script.js"></script>
+  <script>
+    alert("Chào mừng bạn đến với căn phòng Friend Check");
+
+    function askAndPlayMusic() {
+        let answer = confirm("Bạn có muốn nghe nhạc không?");
+        if (answer) {
+            alert("Oke giờ thì nhấn chuột vào bất kỳ đâu để bắt đầu nghe nhạc nhé!");
+            document.addEventListener('click', playMusicOnInteraction);
+        }
+    }
+
+    function playMusicOnInteraction() {
+        playMusic("./Như Ngày Hôm Qua (320).mp3");
+        document.removeEventListener('click', playMusicOnInteraction);
+    }
+
+    function playMusic(file) {
+        let audio = new Audio(file);
+        audio.play().catch(error => {
+            console.error("Không thể phát nhạc:", error);
+        });
+    }
+
+    window.onload = askAndPlayMusic;
+</script>
+</body>
+</html>

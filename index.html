@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Casxinhyeu Museum</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<input type="checkbox" id="lightswitch" accesskey="l" />
+<input type="checkbox" checked="checked" id="wall4" accesskey="x" />
+
+<label></label><label></label><label></label><label></label><label></label><label></label><label></label><label></label><label></label><label></label><label></label><label></label><label></label><label></label>
+<label class="p1hover pointer" title="Nhấn để xem ảnh trong tab mới">
+  <a href="#" target="_blank"></a>
+  <label class="pointer"></label>
+</label>
+<label class="p1hover pointer" title="Nhấn để xem ảnh trong tab mới">
+  <a href="#" target="_blank"></a>
+  <label class="pointer"></label>
+</label>
+<label class="p1hover pointer" title="Nhấn để xem ảnh trong tab mới">
+  <a href="#" target="_blank"></a>
+  <label class="pointer"></label>
+</label>
+<label></label>
+<label class="p2hover pointer" title="Nhấn để xem ảnh trong tab mới">
+  <a href="#" target="_blank"></a>
+  <label class="pointer"></label>
+</label>
+<label class="p2hover pointer" title="Nhấn để xem ảnh trong tab mới">
+  <a href="#" target="_blank"></a>
+  <label class="pointer"></label>
+</label>
+<label class="p2hover pointer" title="Nhấn để xem ảnh trong tab mới">
+  <a href="#" target="_blank"></a>
+  <label class="pointer"></label>
+</label>
+<label></label>
+<label class="p3hover pointer" title="Nhấn để xem ảnh trong tab mới">
+  <a href="#" target="_blank"></a>
+  <label class="pointer"></label>
+</label>
+<label class="p3hover pointer" title="Nhấn để xem ảnh trong tab mới">
+  <a href="#" target="_blank"></a>
+  <label class="pointer"></label>
+</label>
+<label class="p3hover pointer" title="Nhấn để xem ảnh trong tab mới">
+  <a href="#" target="_blank"></a>
+  <label class="pointer"></label>
+</label>
+<label class="pointer turn" for="wall4" title="Đi đến cánh cửa"></label>
+<label></label><label></label><label></label><label></label><label></label><label></label><label></label><label></label><label></label><label></label><label></label><label></label><label></label>
+
+<z>
+  <x>
+    <y>
+      <floor></floor>
+      <ceiling></ceiling>
+      <wall1>
+        <painting>
+          <img src="./red.jpg" />
+          <p>
+            Tác phẩm :  The Scream (Tiếng thét)
+          <br />
+            <small>Họa sĩ: Edvard Munch</small>
+          </p>
+        </painting>
+      </wall1>
+      <wall2>
+        <painting>
+          <img src="./van.jpg" />
+          <p>
+            Tác phẩm :  The Starry Night (Đêm đầy sao)
+          <br />
+            <small>Họa sĩ: Vincent van Gogh</small>
+          </p>
+        </painting>
+      </wall2>
+      <wall3>
+        <painting>
+          <img src="./monalisa.jpg" />
+          <p>
+            Tác phẩm :  Mona Lisa
+          <br />
+            <small>Họa sĩ: Leonardo da Vinci</small>
+          </p>
+        </painting>
+      </wall3>
+      <wall4>
+
+        <notice>
+          <a title="Nhấn vào đây để căn phòng casxinhyeu"  href="./casxinhyeu/index.html">casxinhyeu room</a>
+          <a title="Nhấn vào đây để căn phòng friend check"  href="./friendcheck/index.html">friend check room</a>
+          <a title="Nhấn vào đây để căn phòng happy birthday"  href="./happy-birthday-master/index.html">happy birthday room</a>
+
+        </notice>
+        <door>
+          <a target="_blank" title="Nhấn vào đây để đến căn phòng có thể bạn chưa biết" href="#">
+          </a>
+        </door>
+
+        <label for="lightswitch" class="pointer" title="Tắt đèn"></label>
+        <fireexit>
+          <i></i>
+          <i></i>
+        </fireexit>
+      </wall4>
+    </y>
+  </x>
+</z>
+
+<label class="turnback" title="Quay lại phòng trưng bày" for="wall4"></label>
+<!-- partial -->
+  <script  src="./script.js"></script>
+  <script>
+    alert("Chào mừng bạn đến với Casxinhyeu Museum");
+
+    function askAndPlayMusic() {
+        let answer = confirm("Bạn có muốn nghe nhạc không?");
+        if (answer) {
+            alert("Oke giờ thì nhấn vào bất kỳ đâu để bắt đầu nghe nhạc nhé!");
+            document.addEventListener('click', playMusicOnInteraction);
+        }
+    }
+
+    function playMusicOnInteraction() {
+        playMusic("./nhacnen.mp3");
+        document.removeEventListener('click', playMusicOnInteraction);
+    }
+
+    function playMusic(file) {
+        let audio = new Audio(file);
+        audio.play().catch(error => {
+            console.error("Không thể phát nhạc:", error);
+        });
+    }
+
+    window.onload = askAndPlayMusic;
+</script>
+
+
+</body>
+</html>
